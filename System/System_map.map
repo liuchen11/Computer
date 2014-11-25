@@ -1,0 +1,202 @@
+Release 14.4 Map P.49d (nt64)
+Xilinx Map Application Log File for Design 'System'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off
+-c 100 -o System_map.ncd System.ngd System.pcf 
+Target Device  : xc3s1200e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Fri Dec 06 01:04:37 2013
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:266 - The function generator VGA_part/Mrom__rom0000265 failed to
+   merge with F5 multiplexer VGA_part/Mrom__rom0000265_f6/MUXF5.I1.  Unable to
+   resolve the conflicts between two or more collections of symbols which have
+   restrictive placement or routing requirements.  The original symbols are:
+   	MUXF5 symbol "VGA_part/Mrom__rom0000265_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000265_f6/F5.I1)
+   	LUT symbol "VGA_part/Mrom__rom0000265" (Output Signal =
+   VGA_part/Mrom__rom0000262)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000265_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000265_f6)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000262_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000262_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000262_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000262_f6/F5.I1)
+   Failure 1:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000265_f7" (Output Signal =
+   VGA_part/Mrom__rom0000265_f7)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000265_f5" (Output Signal =
+   VGA_part/Mrom__rom0000265_f5)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000262_f7" (Output Signal =
+   VGA_part/Mrom__rom0000262_f7)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000262_f5" (Output Signal =
+   VGA_part/Mrom__rom0000262_f5)
+   There is more than one MUXF6.
+   Failure 2:  Unable to combine the following symbols into a single slice.
+   	MUXF5 symbol "VGA_part/Mrom__rom0000265_f5_1" (Output Signal =
+   VGA_part/Mrom__rom0000265_f52)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000262_f5_0" (Output Signal =
+   VGA_part/Mrom__rom0000262_f51)
+   There is more than one F5MUX.
+   Failure 3:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000265_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000265_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000265_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000265_f6/F5.I1)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000262_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000262_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000262_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000262_f6/F5.I1)
+   	LUT symbol "VGA_part/Mrom__rom0000265" (Output Signal =
+   VGA_part/Mrom__rom0000262)
+   There is more than one MUXF6.
+   Failure 4:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000265_f6_0" (Output Signal =
+   VGA_part/Mrom__rom0000265_f61)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000265_f5_0" (Output Signal =
+   VGA_part/Mrom__rom0000265_f51)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000262_f6_0/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000262_f61)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000262_f6_0/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000262_f6_0/F5.I1)
+   There is more than one MUXF6.
+     The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator VGA_part/B_cmp_eq01271 failed to merge
+   with F5 multiplexer VGA_part/G_mux0001<0>1139_f5.  There is a conflict for
+   the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator VGA_part/Mrom__rom0000264 failed to
+   merge with F5 multiplexer VGA_part/Mrom__rom0000264_f6/MUXF5.I1.  Unable to
+   resolve the conflicts between two or more collections of symbols which have
+   restrictive placement or routing requirements.  The original symbols are:
+   	MUXF5 symbol "VGA_part/Mrom__rom0000264_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000264_f6/F5.I1)
+   	LUT symbol "VGA_part/Mrom__rom0000264" (Output Signal =
+   VGA_part/Mrom__rom0000261)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000264_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000264_f6)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000261_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000261_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000261_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000261_f6/F5.I1)
+   Failure 1:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000264_f7" (Output Signal =
+   VGA_part/Mrom__rom0000264_f7)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000264_f5" (Output Signal =
+   VGA_part/Mrom__rom0000264_f5)
+   	LUT symbol "VGA_part/Mrom__rom0000264_f51" (Output Signal =
+   VGA_part/Mrom__rom0000264_f53)
+   	LUT symbol "VGA_part/Mrom__rom00002641" (Output Signal =
+   VGA_part/Mrom__rom00002641)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000261_f7" (Output Signal =
+   VGA_part/Mrom__rom0000261_f7)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000261_f5" (Output Signal =
+   VGA_part/Mrom__rom0000261_f5)
+   	LUT symbol "VGA_part/Mrom__rom00002612" (Output Signal =
+   VGA_part/Mrom__rom00002612)
+   	LUT symbol "VGA_part/Mrom__rom00002611" (Output Signal =
+   VGA_part/Mrom__rom00002611)
+   There is more than one MUXF6.
+   Failure 2:  Unable to combine the following symbols into a single slice.
+   	MUXF5 symbol "VGA_part/Mrom__rom0000264_f5_1" (Output Signal =
+   VGA_part/Mrom__rom0000264_f52)
+   	LUT symbol "VGA_part/Mrom__rom00002646" (Output Signal =
+   VGA_part/Mrom__rom00002646)
+   	LUT symbol "VGA_part/Mrom__rom0000264_f5_11" (Output Signal =
+   VGA_part/Mrom__rom0000264_f5_1)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000261_f5_1" (Output Signal =
+   VGA_part/Mrom__rom0000261_f52)
+   	LUT symbol "VGA_part/Mrom__rom00002616" (Output Signal =
+   VGA_part/Mrom__rom00002616)
+   	LUT symbol "VGA_part/Mrom__rom00002645" (Output Signal =
+   VGA_part/Mrom__rom00002615)
+   There is more than one F5MUX.
+   Failure 3:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000264_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000264_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000264_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000264_f6/F5.I1)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000261_f6/MUXF6" (Output Signal =
+   VGA_part/Mrom__rom0000261_f6)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000261_f6/MUXF5.I1" (Output Signal =
+   VGA_part/Mrom__rom0000261_f6/F5.I1)
+   	LUT symbol "VGA_part/Mrom__rom0000264" (Output Signal =
+   VGA_part/Mrom__rom0000261)
+   There is more than one MUXF6.
+   Failure 4:  Unable to combine the following symbols into a single slice.
+   	MUXF6 symbol "VGA_part/Mrom__rom0000264_f6_0" (Output Signal =
+   VGA_part/Mrom__rom0000264_f61)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000264_f5_0" (Output Signal =
+   VGA_part/Mrom__rom0000264_f51)
+   	LUT symbol "VGA_part/Mrom__rom00002644" (Output Signal =
+   VGA_part/Mrom__rom00002644)
+   	LUT symbol "VGA_part/Mrom__rom0000264_f5_01" (Output Signal =
+   VGA_part/Mrom__rom0000264_f5_0)
+   	MUXF6 symbol "VGA_part/Mrom__rom0000261_f6_0" (Output Signal =
+   VGA_part/Mrom__rom0000261_f61)
+   	MUXF5 symbol "VGA_part/Mrom__rom0000261_f5_0" (Output Signal =
+   VGA_part/Mrom__rom0000261_f51)
+   	LUT symbol "VGA_part/Mrom__rom00002614" (Output Signal =
+   VGA_part/Mrom__rom00002614)
+   	LUT symbol "VGA_part/Mrom__rom00002613" (Output Signal =
+   VGA_part/Mrom__rom00002613)
+   There is more than one MUXF6.
+     The design will exhibit suboptimal timing.
+Running delay-based LUT packing...
+Running related packing...
+Updating timing models...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    3
+Logic Utilization:
+  Number of Slice Flip Flops:           725 out of  17,344    4%
+  Number of 4 input LUTs:             2,709 out of  17,344   15%
+Logic Distribution:
+  Number of occupied Slices:          1,658 out of   8,672   19%
+    Number of Slices containing only related logic:   1,658 out of   1,658 100%
+    Number of Slices containing unrelated logic:          0 out of   1,658   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,749 out of  17,344   15%
+    Number used as logic:             2,709
+    Number used as a route-thru:         40
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 72 out of     250   28%
+  Number of BUFGMUXs:                     4 out of      24   16%
+
+Average Fanout of Non-Clock Nets:                3.96
+
+Peak Memory Usage:  362 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   7 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Mapping completed.
+See MAP report file "System_map.mrp" for details.

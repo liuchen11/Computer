@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/System/System.xst" -ofn "D:/ISE_workspace/Computer/System/System.syr" 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/System/System.xst" -ofn "D:/ISE_workspace/Computer/System/System.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc System.ucf -p xc3s1200e-fg320-4 System.ngc System.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o System_map.ncd System.ngd System.pcf 
+par -w -intstyle ise -ol high -t 1 System_map.ncd System.ncd System.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml System.twx System.ncd -o System.twr System.pcf -ucf System.ucf 
+bitgen -intstyle ise -f System.ut System.ncd 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/System/System.xst" -ofn "D:/ISE_workspace/Computer/System/System.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc System.ucf -p xc3s1200e-fg320-4 System.ngc System.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o System_map.ncd System.ngd System.pcf 
+par -w -intstyle ise -ol high -t 1 System_map.ncd System.ncd System.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml System.twx System.ncd -o System.twr System.pcf -ucf System.ucf 
+bitgen -intstyle ise -f System.ut System.ncd 

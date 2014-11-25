@@ -1,0 +1,76 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Wed Nov 27 19:55:15 2013
+# Process ID: 9424
+# Log file: D:/ISE_workspace/System/planAhead_run_1/planAhead.log
+# Journal file: D:/ISE_workspace/System/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/ISE/14.4/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/ISE/14.4/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/ISE_workspace/System/pa.fromNetlist.tcl
+# create_project -name System -dir "D:/ISE_workspace/System/planAhead_run_1" -part xc3s1200efg320-4
+create_project: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 460.625 ; gain = 70.027
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/ISE_workspace/System/Clock.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/ISE_workspace/System} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "Clock.ucf" [current_fileset -constrset]
+Adding file 'D:/ISE_workspace/System/Clock.ucf' to fileset 'constrs_1'
+# add_files [list {Clock.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+Release 14.4 - ngc2edif P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design Clock.ngc ...
+WARNING:NetListWriters:298 - No output is written to Clock.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Clock.edif ...
+ngc2edif: Total memory usage is 81168 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/System.data/cache/Clock_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/System.data/cache/Clock_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library D:/ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [D:/ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [D:/ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from D:/ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : D:/ISE/14.4/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library D:/ISE/14.4/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [D:/ISE_workspace/System/Clock.ucf]
+Finished Parsing UCF File [D:/ISE_workspace/System/Clock.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 65189a50
+link_design: Time (s): elapsed = 00:00:16 . Memory (MB): peak = 614.625 ; gain = 144.918
+startgroup
+set_property package_pin B8 [get_ports clk_in]
+endgroup
+startgroup
+set_property package_pin D10 [get_ports clk_out]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See D:/ISE_workspace/System\planAhead_pid9424.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Nov 27 19:57:57 2013...
+INFO: [Common 17-83] Releasing license: PlanAhead

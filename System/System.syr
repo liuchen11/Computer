@@ -1,0 +1,1267 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: System.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "System.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "System"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : System
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Define.vhd" in Library work.
+Architecture define of Entity define is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/VGA.vhd" in Library work.
+Entity <vga> compiled.
+Entity <vga> (Architecture <behavioral>) compiled.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Clock.vhd" in Library work.
+Architecture behavioral of Entity clock is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Adder.vhd" in Library work.
+Architecture behavioral of Entity adder is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/SingleRegister.vhd" in Library work.
+Architecture behavioral of Entity singleregister is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/IF_ID.vhd" in Library work.
+Architecture behavioral of Entity if_id is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Decoder.vhd" in Library work.
+Architecture behavioral of Entity decoder is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/ID_bubble.vhd" in Library work.
+Architecture behavioral of Entity id_bubble is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Registerheap.vhd" in Library work.
+Architecture behavioral of Entity registerheap is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/SignExtender.vhd" in Library work.
+Architecture behavioral of Entity signextender is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/ZeroExtender.vhd" in Library work.
+Architecture behavioral of Entity zeroextender is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/ID_EXE.vhd" in Library work.
+Architecture behavioral of Entity id_exe is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/EXE_bubble.vhd" in Library work.
+Architecture behavioral of Entity exe_bubble is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/ALU.vhd" in Library work.
+Architecture behavioral of Entity alu is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/EXE_MEM.vhd" in Library work.
+Architecture behavioral of Entity exe_mem is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Feedback.vhd" in Library work.
+Architecture behavioral of Entity feedback is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/Jumper.vhd" in Library work.
+Architecture behavioral of Entity jumper is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/BubbleController.vhd" in Library work.
+Architecture behavioral of Entity bubblecontroller is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/MemoryController.vhd" in Library work.
+Architecture behavioral of Entity memorycontroller is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/MEM_WB.vhd" in Library work.
+Architecture behavioral of Entity mem_wb is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/System/System.vhd" in Library work.
+Architecture behavioral of Entity system is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <System> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VGA> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Clock> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Adder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Singleregister> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <IF_ID> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Decoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ID_bubble> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <RegisterHeap> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <SignExtender> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ZeroExtender> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ID_EXE> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EXE_bubble> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <EXE_MEM> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Feedback> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Jumper> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <BubbleController> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MemoryController> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MEM_WB> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <System> in library <work> (Architecture <behavioral>).
+Entity <System> analyzed. Unit <System> generated.
+
+Analyzing Entity <VGA> in library <work> (Architecture <behavioral>).
+Entity <VGA> analyzed. Unit <VGA> generated.
+
+Analyzing Entity <Clock> in library <work> (Architecture <behavioral>).
+Entity <Clock> analyzed. Unit <Clock> generated.
+
+Analyzing Entity <Adder> in library <work> (Architecture <behavioral>).
+Entity <Adder> analyzed. Unit <Adder> generated.
+
+Analyzing Entity <Singleregister> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE_workspace/Computer/System/SingleRegister.vhd" line 50: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <en>
+Entity <Singleregister> analyzed. Unit <Singleregister> generated.
+
+Analyzing Entity <IF_ID> in library <work> (Architecture <behavioral>).
+Entity <IF_ID> analyzed. Unit <IF_ID> generated.
+
+Analyzing Entity <Decoder> in library <work> (Architecture <behavioral>).
+Entity <Decoder> analyzed. Unit <Decoder> generated.
+
+Analyzing Entity <ID_bubble> in library <work> (Architecture <behavioral>).
+Entity <ID_bubble> analyzed. Unit <ID_bubble> generated.
+
+Analyzing Entity <RegisterHeap> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE_workspace/Computer/System/Registerheap.vhd" line 56: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <en>
+Entity <RegisterHeap> analyzed. Unit <RegisterHeap> generated.
+
+Analyzing Entity <SignExtender> in library <work> (Architecture <behavioral>).
+Entity <SignExtender> analyzed. Unit <SignExtender> generated.
+
+Analyzing Entity <ZeroExtender> in library <work> (Architecture <behavioral>).
+Entity <ZeroExtender> analyzed. Unit <ZeroExtender> generated.
+
+Analyzing Entity <ID_EXE> in library <work> (Architecture <behavioral>).
+Entity <ID_EXE> analyzed. Unit <ID_EXE> generated.
+
+Analyzing Entity <EXE_bubble> in library <work> (Architecture <behavioral>).
+Entity <EXE_bubble> analyzed. Unit <EXE_bubble> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavioral>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <EXE_MEM> in library <work> (Architecture <behavioral>).
+Entity <EXE_MEM> analyzed. Unit <EXE_MEM> generated.
+
+Analyzing Entity <Feedback> in library <work> (Architecture <behavioral>).
+Entity <Feedback> analyzed. Unit <Feedback> generated.
+
+Analyzing Entity <Jumper> in library <work> (Architecture <behavioral>).
+Entity <Jumper> analyzed. Unit <Jumper> generated.
+
+Analyzing Entity <BubbleController> in library <work> (Architecture <behavioral>).
+Entity <BubbleController> analyzed. Unit <BubbleController> generated.
+
+Analyzing Entity <MemoryController> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE_workspace/Computer/System/MemoryController.vhd" line 128: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <inputaddr>, <PCaddr>
+Entity <MemoryController> analyzed. Unit <MemoryController> generated.
+
+Analyzing Entity <MEM_WB> in library <work> (Architecture <behavioral>).
+Entity <MEM_WB> analyzed. Unit <MEM_WB> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VGA>.
+    Related source file is "D:/ISE_workspace/Computer/System/VGA.vhd".
+WARNING:Xst:1780 - Signal <div> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 128x51-bit ROM for signal <$rom0000>.
+    Found 1-bit register for signal <Hs>.
+    Found 3-bit register for signal <B>.
+    Found 3-bit register for signal <G>.
+    Found 3-bit register for signal <R>.
+    Found 1-bit register for signal <Vs>.
+    Found 10-bit up counter for signal <col>.
+    Found 10-bit comparator greatequal for signal <Hs$cmp_ge0000> created at line 39038.
+    Found 10-bit comparator lessequal for signal <Hs$cmp_le0000> created at line 39038.
+    Found 10-bit up counter for signal <row>.
+    Found 1-bit register for signal <stdclk>.
+    Found 10-bit comparator greatequal for signal <Vs$cmp_ge0000> created at line 39043.
+    Found 10-bit comparator lessequal for signal <Vs$cmp_le0000> created at line 39043.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <VGA> synthesized.
+
+
+Synthesizing Unit <Clock>.
+    Related source file is "D:/ISE_workspace/Computer/System/Clock.vhd".
+    Found 1-bit register for signal <clk_out>.
+    Found 3-bit up counter for signal <frac>.
+    Found 1-bit register for signal <value>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <Clock> synthesized.
+
+
+Synthesizing Unit <Adder>.
+    Related source file is "D:/ISE_workspace/Computer/System/Adder.vhd".
+WARNING:Xst:737 - Found 16-bit latch for signal <output>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 16-bit adder for signal <output$add0000> created at line 50.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <Adder> synthesized.
+
+
+Synthesizing Unit <Singleregister>.
+    Related source file is "D:/ISE_workspace/Computer/System/SingleRegister.vhd".
+    Found 16-bit register for signal <output>.
+    Found 16-bit register for signal <value>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <Singleregister> synthesized.
+
+
+Synthesizing Unit <IF_ID>.
+    Related source file is "D:/ISE_workspace/Computer/System/IF_ID.vhd".
+    Found 16-bit register for signal <ins_out>.
+    Found 16-bit register for signal <PC_out>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <IF_ID> synthesized.
+
+
+Synthesizing Unit <Decoder>.
+    Related source file is "D:/ISE_workspace/Computer/System/Decoder.vhd".
+    Found 4x12-bit ROM for signal <mem$mux0001> created at line 104.
+    Found 4x15-bit ROM for signal <input_1_0$rom0000>.
+    Summary:
+	inferred   2 ROM(s).
+Unit <Decoder> synthesized.
+
+
+Synthesizing Unit <ID_bubble>.
+    Related source file is "D:/ISE_workspace/Computer/System/ID_bubble.vhd".
+Unit <ID_bubble> synthesized.
+
+
+Synthesizing Unit <RegisterHeap>.
+    Related source file is "D:/ISE_workspace/Computer/System/Registerheap.vhd".
+WARNING:Xst:1780 - Signal <write_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit register for signal <dataout1>.
+    Found 16-bit register for signal <dataout2>.
+    Found 16-bit 8-to-1 multiplexer for signal <$varindex0000> created at line 77.
+    Found 16-bit 8-to-1 multiplexer for signal <$varindex0001> created at line 82.
+    Found 3-bit comparator equal for signal <dataout1$cmp_eq0000> created at line 74.
+    Found 3-bit comparator equal for signal <dataout2$cmp_eq0000> created at line 79.
+    Found 128-bit register for signal <registers>.
+    Summary:
+	inferred 160 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <RegisterHeap> synthesized.
+
+
+Synthesizing Unit <SignExtender>.
+    Related source file is "D:/ISE_workspace/Computer/System/SignExtender.vhd".
+Unit <SignExtender> synthesized.
+
+
+Synthesizing Unit <ZeroExtender>.
+    Related source file is "D:/ISE_workspace/Computer/System/ZeroExtender.vhd".
+Unit <ZeroExtender> synthesized.
+
+
+Synthesizing Unit <ID_EXE>.
+    Related source file is "D:/ISE_workspace/Computer/System/ID_EXE.vhd".
+    Found 16-bit register for signal <data1_out>.
+    Found 16-bit register for signal <z7_0_out>.
+    Found 16-bit register for signal <data2_out>.
+    Found 16-bit register for signal <SP_out>.
+    Found 3-bit register for signal <r4_2_out>.
+    Found 16-bit register for signal <IH_out>.
+    Found 16-bit register for signal <s7_0_out>.
+    Found 16-bit register for signal <RA_out>.
+    Found 16-bit register for signal <s4_0_out>.
+    Found 16-bit register for signal <PC_out>.
+    Found 16-bit register for signal <z4_2_out>.
+    Found 16-bit register for signal <s3_0_out>.
+    Found 12-bit register for signal <mem_out>.
+    Found 4-bit register for signal <wb_out>.
+    Found 3-bit register for signal <r10_8_out>.
+    Found 11-bit register for signal <exe_out>.
+    Found 16-bit register for signal <s10_0_out>.
+    Found 3-bit register for signal <r7_5_out>.
+    Summary:
+	inferred 228 D-type flip-flop(s).
+Unit <ID_EXE> synthesized.
+
+
+Synthesizing Unit <EXE_bubble>.
+    Related source file is "D:/ISE_workspace/Computer/System/EXE_bubble.vhd".
+Unit <EXE_bubble> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:/ISE_workspace/Computer/System/ALU.vhd".
+    Found 16-bit addsub for signal <result$addsub0000>.
+    Found 16-bit shifter rotate left for signal <result$shift0007> created at line 84.
+    Found 16-bit shifter logical left for signal <result$shift0008> created at line 66.
+    Found 16-bit shifter logical right for signal <result$shift0009> created at line 72.
+    Found 16-bit shifter arithmetic right for signal <result$shift0010> created at line 78.
+    Found 16-bit xor2 for signal <result$xor0000> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <EXE_MEM>.
+    Related source file is "D:/ISE_workspace/Computer/System/EXE_MEM.vhd".
+    Found 16-bit register for signal <data1_out>.
+    Found 16-bit register for signal <data2_out>.
+    Found 3-bit register for signal <r4_2_out>.
+    Found 16-bit register for signal <T_out>.
+    Found 16-bit register for signal <ALU_out>.
+    Found 16-bit register for signal <IH_out>.
+    Found 16-bit register for signal <RA_out>.
+    Found 16-bit register for signal <PC_out>.
+    Found 12-bit register for signal <mem_out>.
+    Found 4-bit register for signal <wb_out>.
+    Found 3-bit register for signal <r10_8_out>.
+    Found 16-bit register for signal <adder_out>.
+    Found 3-bit register for signal <r7_5_out>.
+    Found 16-bit register for signal <old_T>.
+    Summary:
+	inferred 169 D-type flip-flop(s).
+Unit <EXE_MEM> synthesized.
+
+
+Synthesizing Unit <Feedback>.
+    Related source file is "D:/ISE_workspace/Computer/System/Feedback.vhd".
+    Found 3-bit comparator equal for signal <update_r1_0$cmp_eq0001> created at line 63.
+    Found 3-bit comparator equal for signal <update_r1_1$cmp_eq0001> created at line 85.
+    Found 3-bit comparator equal for signal <update_r2_0$cmp_eq0000> created at line 68.
+    Found 3-bit comparator equal for signal <update_r2_1$cmp_eq0000> created at line 90.
+    Summary:
+	inferred   4 Comparator(s).
+Unit <Feedback> synthesized.
+
+
+Synthesizing Unit <Jumper>.
+    Related source file is "D:/ISE_workspace/Computer/System/Jumper.vhd".
+    Found 16-bit 4-to-1 multiplexer for signal <next_ins>.
+    Found 16-bit 4-to-1 multiplexer for signal <next_ins$mux0001> created at line 51.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <Jumper> synthesized.
+
+
+Synthesizing Unit <BubbleController>.
+    Related source file is "D:/ISE_workspace/Computer/System/BubbleController.vhd".
+    Found 16-bit comparator equal for signal <bubble$cmp_eq0000> created at line 47.
+    Summary:
+	inferred   1 Comparator(s).
+Unit <BubbleController> synthesized.
+
+
+Synthesizing Unit <MemoryController>.
+    Related source file is "D:/ISE_workspace/Computer/System/MemoryController.vhd".
+WARNING:Xst:1780 - Signal <input> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <addr_BF01<15:2>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000.
+    Found finite state machine <FSM_0> for signal <ser_rd_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 32                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | ser_rd_state$and0000      (positive)           |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | state$not0000             (positive)           |
+    | Reset              | rst                       (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_2> for signal <ser_wr_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 23                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | ser_rd_state$and0000      (positive)           |
+    | Power Up State     | 000                                            |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <ramoe>.
+    Found 16-bit register for signal <outputdata>.
+    Found 1-bit register for signal <ramwe>.
+    Found 16-bit tristate buffer for signal <ramdata>.
+    Found 1-bit register for signal <rdn>.
+    Found 1-bit register for signal <wrn>.
+    Found 1-bit register for signal <ramen>.
+    Found 16-bit register for signal <outputins>.
+    Found 16-bit register for signal <addr_BF00>.
+    Found 2-bit register for signal <addr_BF01<1:0>>.
+    Found 3-bit up counter for signal <cnt>.
+    Found 16-bit register for signal <Mtridata_ramdata> created at line 175.
+    Found 1-bit register for signal <Mtrien_ramdata> created at line 175.
+    Summary:
+	inferred   3 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred  72 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <MemoryController> synthesized.
+
+
+Synthesizing Unit <MEM_WB>.
+    Related source file is "D:/ISE_workspace/Computer/System/MEM_WB.vhd".
+    Found 16-bit register for signal <data_out>.
+    Found 3-bit register for signal <addr_out>.
+    Found 4-bit register for signal <wb_out>.
+    Summary:
+	inferred  23 D-type flip-flop(s).
+Unit <MEM_WB> synthesized.
+
+
+Synthesizing Unit <System>.
+    Related source file is "D:/ISE_workspace/Computer/System/System.vhd".
+WARNING:Xst:646 - Signal <sflag> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <en_mem_wb> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:1780 - Signal <en_if_id> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <en_id_exe> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <en_exe_mem> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:1780 - Signal <en_PC> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit 4-to-1 multiplexer for signal <data_mem>.
+    Found 16-bit 4-to-1 multiplexer for signal <op_1>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <System> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 128x51-bit ROM                                        : 1
+ 4x12-bit ROM                                          : 1
+ 4x15-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 3-bit up counter                                      : 2
+# Registers                                            : 75
+ 1-bit register                                        : 13
+ 11-bit register                                       : 1
+ 12-bit register                                       : 2
+ 16-bit register                                       : 46
+ 3-bit register                                        : 10
+ 4-bit register                                        : 3
+# Latches                                              : 2
+ 16-bit latch                                          : 2
+# Comparators                                          : 11
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 2
+ 16-bit comparator equal                               : 1
+ 3-bit comparator equal                                : 6
+# Multiplexers                                         : 6
+ 16-bit 4-to-1 multiplexer                             : 4
+ 16-bit 8-to-1 multiplexer                             : 2
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 16-bit shifter rotate left                            : 1
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <dataram/ser_wr_state/FSM> on signal <ser_wr_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <dataram/state/FSM> on signal <state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <dataram/ser_rd_state/FSM> on signal <ser_rd_state[1:7]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 0000001
+ 001   | 0000010
+ 010   | 0000100
+ 011   | 0001000
+ 100   | 0010000
+ 101   | 0100000
+ 110   | 1000000
+-------------------
+INFO:Xst:2261 - The FF/Latch <value> in Unit <gen_clock> is equivalent to the following FF/Latch, which will be removed : <clk_out> 
+WARNING:Xst:1710 - FF/Latch <z7_0_out_13> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_14> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_15> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_1> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_2> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_3> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_4> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_5> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_6> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_7> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_8> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_9> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_10> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_11> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_12> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_13> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_14> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_15> has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_3> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_4> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_5> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_6> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_7> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_8> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_9> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_10> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_11> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_12> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_13> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_14> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z4_2_out_15> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_8> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_9> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_10> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_11> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <z7_0_out_12> (without init value) has a constant value of 0 in block <id_exe_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_15> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_14> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_13> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_12> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_11> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_10> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_9> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_8> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_7> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_6> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_5> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_4> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_3> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_2> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_1> (without init value) has a constant value of 0 in block <exe_mem_part>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <8>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <9>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <10>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <11>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <12>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <13>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <14>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <15>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <0>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <1>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <2>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <3>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <4>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <5>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <6>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <7>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <8>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <9>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <10>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <11>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <12>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <13>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <14>.
+WARNING:Xst:1294 - Latch <0> is equivalent to a wire in block <15>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# ROMs                                                 : 3
+ 128x51-bit ROM                                        : 1
+ 4x12-bit ROM                                          : 1
+ 4x15-bit ROM                                          : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 2
+ 16-bit addsub                                         : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 3-bit up counter                                      : 2
+# Registers                                            : 826
+ Flip-Flops                                            : 826
+# Latches                                              : 2
+ 16-bit latch                                          : 2
+# Comparators                                          : 11
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 2
+ 16-bit comparator equal                               : 1
+ 3-bit comparator equal                                : 6
+# Multiplexers                                         : 36
+ 1-bit 8-to-1 multiplexer                              : 32
+ 16-bit 4-to-1 multiplexer                             : 4
+# Logic shifters                                       : 4
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+ 16-bit shifter rotate left                            : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <value> in Unit <Clock> is equivalent to the following FF/Latch, which will be removed : <clk_out> 
+INFO:Xst:2261 - The FF/Latch <s7_0_out_7> in Unit <ID_EXE> is equivalent to the following 10 FFs/Latches, which will be removed : <s7_0_out_8> <s7_0_out_9> <s7_0_out_10> <s7_0_out_11> <s7_0_out_12> <s7_0_out_13> <s7_0_out_14> <s7_0_out_15> <r7_5_out_2> <z7_0_out_7> 
+INFO:Xst:2261 - The FF/Latch <r10_8_out_2> in Unit <ID_EXE> is equivalent to the following 6 FFs/Latches, which will be removed : <s10_0_out_10> <s10_0_out_11> <s10_0_out_12> <s10_0_out_13> <s10_0_out_14> <s10_0_out_15> 
+INFO:Xst:2261 - The FF/Latch <z4_2_out_0> in Unit <ID_EXE> is equivalent to the following 2 FFs/Latches, which will be removed : <z7_0_out_2> <r4_2_out_0> 
+INFO:Xst:2261 - The FF/Latch <z4_2_out_1> in Unit <ID_EXE> is equivalent to the following 15 FFs/Latches, which will be removed : <s3_0_out_3> <s3_0_out_4> <s3_0_out_5> <s3_0_out_6> <s3_0_out_7> <s3_0_out_8> <s3_0_out_9> <s3_0_out_10> <s3_0_out_11> <s3_0_out_12> <s3_0_out_13> <s3_0_out_14> <s3_0_out_15> <z7_0_out_3> <r4_2_out_1> 
+INFO:Xst:2261 - The FF/Latch <z4_2_out_3> in Unit <ID_EXE> is equivalent to the following 20 FFs/Latches, which will be removed : <z4_2_out_4> <z4_2_out_5> <z4_2_out_6> <z4_2_out_7> <z4_2_out_8> <z4_2_out_9> <z4_2_out_10> <z4_2_out_11> <z4_2_out_12> <z4_2_out_13> <z4_2_out_14> <z4_2_out_15> <z7_0_out_8> <z7_0_out_9> <z7_0_out_10> <z7_0_out_11> <z7_0_out_12> <z7_0_out_13> <z7_0_out_14> <z7_0_out_15> 
+INFO:Xst:2261 - The FF/Latch <z4_2_out_2> in Unit <ID_EXE> is equivalent to the following 14 FFs/Latches, which will be removed : <s4_0_out_4> <s4_0_out_5> <s4_0_out_6> <s4_0_out_7> <s4_0_out_8> <s4_0_out_9> <s4_0_out_10> <s4_0_out_11> <s4_0_out_12> <s4_0_out_13> <s4_0_out_14> <s4_0_out_15> <z7_0_out_4> <r4_2_out_2> 
+INFO:Xst:2261 - The FF/Latch <r7_5_out_0> in Unit <ID_EXE> is equivalent to the following FF/Latch, which will be removed : <z7_0_out_5> 
+INFO:Xst:2261 - The FF/Latch <r7_5_out_1> in Unit <ID_EXE> is equivalent to the following FF/Latch, which will be removed : <z7_0_out_6> 
+INFO:Xst:2261 - The FF/Latch <old_T_1> in Unit <EXE_MEM> is equivalent to the following 14 FFs/Latches, which will be removed : <old_T_2> <old_T_3> <old_T_4> <old_T_5> <old_T_6> <old_T_7> <old_T_8> <old_T_9> <old_T_10> <old_T_11> <old_T_12> <old_T_13> <old_T_14> <old_T_15> 
+WARNING:Xst:1710 - FF/Latch <z4_2_out_3> (without init value) has a constant value of 0 in block <ID_EXE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <old_T_1> has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_1> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_2> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_3> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_4> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_5> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_6> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_7> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_8> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_9> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_10> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_11> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_12> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_13> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_14> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <T_out_15> (without init value) has a constant value of 0 in block <EXE_MEM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1294 - Latch <PC_adder/output_0> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_1> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_2> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_3> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_4> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_5> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_6> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_7> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_8> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_9> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_10> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_11> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_12> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_13> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_14> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_adder/output_15> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_0> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_1> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_2> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_3> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_4> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_5> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_6> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_7> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_8> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_9> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_10> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_11> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_12> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_13> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_14> is equivalent to a wire in block <System>.
+WARNING:Xst:1294 - Latch <PC_jumper/output_15> is equivalent to a wire in block <System>.
+WARNING:Xst:2170 - Unit ALU : the following signal(s) form a combinatorial loop: result_shift0006<15>.
+
+Optimizing unit <System> ...
+
+Optimizing unit <VGA> ...
+
+Optimizing unit <Singleregister> ...
+
+Optimizing unit <IF_ID> ...
+
+Optimizing unit <Decoder> ...
+
+Optimizing unit <RegisterHeap> ...
+
+Optimizing unit <ID_EXE> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <EXE_MEM> ...
+
+Optimizing unit <Jumper> ...
+
+Optimizing unit <MEM_WB> ...
+WARNING:Xst:1710 - FF/Latch <id_exe_part/exe_out_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <PC_register/value_15> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_14> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_13> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_12> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_11> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_10> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_9> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_8> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_7> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_6> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_5> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_4> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_3> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_2> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_1> of sequential type is unconnected in block <System>.
+WARNING:Xst:2677 - Node <PC_register/value_0> of sequential type is unconnected in block <System>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_0> in Unit <System> is equivalent to the following 4 FFs/Latches, which will be removed : <id_exe_part/z7_0_out_0> <id_exe_part/s3_0_out_0> <id_exe_part/s4_0_out_0> <id_exe_part/s7_0_out_0> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_1> in Unit <System> is equivalent to the following 4 FFs/Latches, which will be removed : <id_exe_part/z7_0_out_1> <id_exe_part/s3_0_out_1> <id_exe_part/s4_0_out_1> <id_exe_part/s7_0_out_1> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_2> in Unit <System> is equivalent to the following 4 FFs/Latches, which will be removed : <id_exe_part/s3_0_out_2> <id_exe_part/s4_0_out_2> <id_exe_part/s7_0_out_2> <id_exe_part/z4_2_out_0> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_3> in Unit <System> is equivalent to the following 3 FFs/Latches, which will be removed : <id_exe_part/s4_0_out_3> <id_exe_part/s7_0_out_3> <id_exe_part/z4_2_out_1> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_4> in Unit <System> is equivalent to the following 2 FFs/Latches, which will be removed : <id_exe_part/s7_0_out_4> <id_exe_part/z4_2_out_2> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_5> in Unit <System> is equivalent to the following 2 FFs/Latches, which will be removed : <id_exe_part/r7_5_out_0> <id_exe_part/s7_0_out_5> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_6> in Unit <System> is equivalent to the following 2 FFs/Latches, which will be removed : <id_exe_part/r7_5_out_1> <id_exe_part/s7_0_out_6> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_7> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <id_exe_part/s7_0_out_7> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_8> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <id_exe_part/r10_8_out_0> 
+INFO:Xst:2261 - The FF/Latch <id_exe_part/s10_0_out_9> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <id_exe_part/r10_8_out_1> 
+Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 18.
+FlipFlop mem_wb_part/wb_out_1 has been replicated 1 time(s)
+FlipFlop mem_wb_part/wb_out_2 has been replicated 1 time(s)
+FlipFlop mem_wb_part/wb_out_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 725
+ Flip-Flops                                            : 725
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : System.ngr
+Top Level Output File Name         : System
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 72
+
+Cell Usage :
+# BELS                             : 3355
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 33
+#      LUT2                        : 104
+#      LUT2_D                      : 32
+#      LUT2_L                      : 1
+#      LUT3                        : 802
+#      LUT3_D                      : 71
+#      LUT3_L                      : 52
+#      LUT4                        : 1342
+#      LUT4_D                      : 127
+#      LUT4_L                      : 167
+#      MUXCY                       : 126
+#      MUXF5                       : 340
+#      MUXF6                       : 62
+#      MUXF7                       : 15
+#      VCC                         : 1
+#      XORCY                       : 68
+# FlipFlops/Latches                : 725
+#      FDC                         : 45
+#      FDCE                        : 325
+#      FDCE_1                      : 240
+#      FDE                         : 74
+#      FDE_1                       : 32
+#      FDPE                        : 5
+#      FDR                         : 4
+# Clock Buffers                    : 4
+#      BUFG                        : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 70
+#      IBUF                        : 4
+#      IOBUF                       : 16
+#      OBUF                        : 50
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                     1439  out of   8672    16%  
+ Number of Slice Flip Flops:            725  out of  17344     4%  
+ Number of 4 input LUTs:               2742  out of  17344    15%  
+ Number of IOs:                          72
+ Number of bonded IOBs:                  72  out of    250    28%  
+ Number of GCLKs:                         4  out of     24    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 91    |
+VGA_part/stdclk1                   | BUFG                   | 31    |
+gen_clock/value1                   | BUFG                   | 602   |
+scan                               | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------+---------------------------+-------+
+Control Signal                                          | Buffer(FF name)           | Load  |
+--------------------------------------------------------+---------------------------+-------+
+IH_register/rst_inv(registers/rst_inv1_INV_0:O)         | NONE(dataram/cnt_0)       | 308   |
+registers/rst_inv1_INV_0_1(registers/rst_inv1_INV_0_1:O)| NONE(IH_register/output_0)| 307   |
+--------------------------------------------------------+---------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 23.169ns (Maximum Frequency: 43.162MHz)
+   Minimum input arrival time before clock: 6.017ns
+   Maximum output required time after clock: 6.434ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.823ns (frequency: 146.565MHz)
+  Total number of paths / destination ports: 877 / 163
+-------------------------------------------------------------------------
+Delay:               6.823ns (Levels of Logic = 3)
+  Source:            dataram/ser_wr_state_FSM_FFd3 (FF)
+  Destination:       dataram/Mtrien_ramdata (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: dataram/ser_wr_state_FSM_FFd3 to dataram/Mtrien_ramdata
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             31   0.591   1.437  dataram/ser_wr_state_FSM_FFd3 (dataram/ser_wr_state_FSM_FFd3)
+     LUT2:I0->O            2   0.704   0.622  dataram/Mtridata_ramdata_and0000111 (dataram/ser_wr_state_cmp_eq0003)
+     LUT4:I0->O            1   0.704   0.455  dataram/Mtridata_ramdata_and000010 (dataram/Mtridata_ramdata_and000010)
+     LUT4:I2->O           17   0.704   1.051  dataram/Mtridata_ramdata_and000034 (dataram/Mtridata_ramdata_and0000)
+     FDE:CE                    0.555          dataram/Mtridata_ramdata_0
+    ----------------------------------------
+    Total                      6.823ns (3.258ns logic, 3.565ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_part/stdclk1'
+  Clock period: 16.848ns (frequency: 59.356MHz)
+  Total number of paths / destination ports: 45771 / 41
+-------------------------------------------------------------------------
+Delay:               16.848ns (Levels of Logic = 13)
+  Source:            VGA_part/col_6 (FF)
+  Destination:       VGA_part/R_2 (FF)
+  Source Clock:      VGA_part/stdclk1 rising
+  Destination Clock: VGA_part/stdclk1 rising
+
+  Data Path: VGA_part/col_6 to VGA_part/R_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            106   0.591   1.461  VGA_part/col_6 (VGA_part/col_6)
+     LUT3_D:I0->O          7   0.704   0.712  VGA_part/B_cmp_eq007411 (VGA_part/N197)
+     LUT4:I3->O           17   0.704   1.055  VGA_part/B_cmp_eq01061 (VGA_part/B_cmp_eq0106)
+     LUT4:I3->O            2   0.704   0.526  VGA_part/G_or0057210 (VGA_part/G_or0057210)
+     LUT4:I1->O            2   0.704   0.526  VGA_part/R_or0068218 (VGA_part/R_or0068218)
+     LUT3:I1->O            2   0.704   0.451  VGA_part/R_or0068253 (VGA_part/N163)
+     LUT4:I3->O            1   0.704   0.424  VGA_part/R_mux0001<1>12135_SW0 (N796)
+     LUT4_L:I3->LO         1   0.704   0.104  VGA_part/R_mux0001<1>12135 (VGA_part/R_mux0001<1>12135)
+     LUT4:I3->O            1   0.704   0.424  VGA_part/R_mux0001<1>12162 (VGA_part/R_mux0001<1>12162)
+     LUT4:I3->O            1   0.704   0.424  VGA_part/R_mux0001<1>12223 (VGA_part/R_mux0001<1>12223)
+     LUT4_D:I3->LO         1   0.704   0.135  VGA_part/R_mux0001<1>12260 (N1016)
+     LUT3:I2->O            2   0.704   0.451  VGA_part/R_mux0001<2>11251 (VGA_part/N351)
+     LUT4_L:I3->LO         1   0.704   0.104  VGA_part/R_mux0001<0>458 (VGA_part/R_mux0001<0>458)
+     LUT4:I3->O            1   0.704   0.000  VGA_part/R_mux0001<0>480 (VGA_part/R_mux0001<0>)
+     FDE:D                     0.308          VGA_part/R_2
+    ----------------------------------------
+    Total                     16.848ns (10.051ns logic, 6.797ns route)
+                                       (59.7% logic, 40.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gen_clock/value1'
+  Clock period: 23.169ns (frequency: 43.162MHz)
+  Total number of paths / destination ports: 694909 / 794
+-------------------------------------------------------------------------
+Delay:               11.584ns (Levels of Logic = 23)
+  Source:            PC_register/output_1 (FF)
+  Destination:       id_exe_part/exe_out_9 (FF)
+  Source Clock:      gen_clock/value1 falling
+  Destination Clock: gen_clock/value1 rising
+
+  Data Path: PC_register/output_1 to id_exe_part/exe_out_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           3   0.591   0.706  PC_register/output_1 (PC_register/output_1)
+     LUT1:I0->O            1   0.704   0.000  PC_adder/Madd_output_add0000_cy<1>_rt (PC_adder/Madd_output_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  PC_adder/Madd_output_add0000_cy<1> (PC_adder/Madd_output_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<2> (PC_adder/Madd_output_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<3> (PC_adder/Madd_output_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<4> (PC_adder/Madd_output_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<5> (PC_adder/Madd_output_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<6> (PC_adder/Madd_output_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<7> (PC_adder/Madd_output_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<8> (PC_adder/Madd_output_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<9> (PC_adder/Madd_output_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<10> (PC_adder/Madd_output_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<11> (PC_adder/Madd_output_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<12> (PC_adder/Madd_output_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  PC_adder/Madd_output_add0000_cy<13> (PC_adder/Madd_output_add0000_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  PC_adder/Madd_output_add0000_cy<14> (PC_adder/Madd_output_add0000_cy<14>)
+     XORCY:CI->O           5   0.804   0.668  PC_adder/Madd_output_add0000_xor<15> (PC_if<15>)
+     LUT3:I2->O            1   0.704   0.000  jump_controller/Mmux_next_ins_96 (jump_controller/Mmux_next_ins_96)
+     MUXF5:I0->O           1   0.321   0.455  jump_controller/Mmux_next_ins_7_f5_5 (jump_controller/Mmux_next_ins_7_f56)
+     LUT3:I2->O            1   0.704   0.000  jump_controller/Mmux_next_ins_46 (jump_controller/Mmux_next_ins_46)
+     MUXF5:I0->O           2   0.321   0.451  jump_controller/Mmux_next_ins_2_f5_5 (PC_back<15>)
+     LUT4:I3->O            1   0.704   0.000  bubble_control/Mcompar_bubble_cmp_eq0000_lut<7> (bubble_control/Mcompar_bubble_cmp_eq0000_lut<7>)
+     MUXCY:S->O           42   0.864   1.344  bubble_control/Mcompar_bubble_cmp_eq0000_cy<7> (bubble_control/Mcompar_bubble_cmp_eq0000_cy<7>)
+     LUT2:I1->O            1   0.704   0.000  id_bubble_control/mem_out<8>1 (memc_id<8>)
+     FDCE:D                    0.308          id_exe_part/mem_out_8
+    ----------------------------------------
+    Total                     11.584ns (7.960ns logic, 3.624ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'scan'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            VGA_part/stdclk (FF)
+  Destination:       VGA_part/stdclk (FF)
+  Source Clock:      scan rising
+  Destination Clock: scan rising
+
+  Data Path: VGA_part/stdclk to VGA_part/stdclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  VGA_part/stdclk (VGA_part/stdclk1)
+     FDR:R                     0.911          VGA_part/stdclk
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 118 / 115
+-------------------------------------------------------------------------
+Offset:              6.017ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       dataram/outputins_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to dataram/outputins_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            50   1.218   1.303  rst_IBUF (rst_IBUF)
+     LUT4:I2->O            1   0.704   0.499  dataram/outputins_and0000_SW1 (N660)
+     LUT4:I1->O           16   0.704   1.034  dataram/outputins_and0000 (dataram/outputins_and0000)
+     FDE:CE                    0.555          dataram/outputins_0
+    ----------------------------------------
+    Total                      6.017ns (3.181ns logic, 2.836ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA_part/stdclk1'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.041ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       VGA_part/Vs (FF)
+  Destination Clock: VGA_part/stdclk1 rising
+
+  Data Path: rst to VGA_part/Vs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            50   1.218   1.268  rst_IBUF (rst_IBUF)
+     FDE:CE                    0.555          VGA_part/B_0
+    ----------------------------------------
+    Total                      3.041ns (1.773ns logic, 1.268ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'gen_clock/value1'
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Offset:              3.041ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       registers/dataout2_15 (FF)
+  Destination Clock: gen_clock/value1 falling
+
+  Data Path: rst to registers/dataout2_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            50   1.218   1.268  rst_IBUF (rst_IBUF)
+     FDE_1:CE                  0.555          registers/dataout1_0
+    ----------------------------------------
+    Total                      3.041ns (1.773ns logic, 1.268ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 37 / 21
+-------------------------------------------------------------------------
+Offset:              4.897ns (Levels of Logic = 1)
+  Source:            dataram/Mtrien_ramdata (FF)
+  Destination:       ramdata<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dataram/Mtrien_ramdata to ramdata<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             16   0.591   1.034  dataram/Mtrien_ramdata (dataram/Mtrien_ramdata)
+     IOBUF:T->IO               3.272          ramdata_15_IOBUF (ramdata<15>)
+    ----------------------------------------
+    Total                      4.897ns (3.863ns logic, 1.034ns route)
+                                       (78.9% logic, 21.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_part/stdclk1'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            VGA_part/Hs (FF)
+  Destination:       Hs (PAD)
+  Source Clock:      VGA_part/stdclk1 rising
+
+  Data Path: VGA_part/Hs to Hs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  VGA_part/Hs (VGA_part/Hs)
+     OBUF:I->O                 3.272          Hs_OBUF (Hs)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'gen_clock/value1'
+  Total number of paths / destination ports: 64 / 32
+-------------------------------------------------------------------------
+Offset:              6.434ns (Levels of Logic = 2)
+  Source:            exe_mem_part/mem_out_11 (FF)
+  Destination:       ramaddr<15> (PAD)
+  Source Clock:      gen_clock/value1 rising
+
+  Data Path: exe_mem_part/mem_out_11 to ramaddr<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            63   0.591   1.447  exe_mem_part/mem_out_11 (exe_mem_part/mem_out_11)
+     LUT3:I0->O            1   0.704   0.420  dataram/ramaddr<9>1 (ramaddr_9_OBUF)
+     OBUF:I->O                 3.272          ramaddr_9_OBUF (ramaddr<9>)
+    ----------------------------------------
+    Total                      6.434ns (4.567ns logic, 1.867ns route)
+                                       (71.0% logic, 29.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 74.00 secs
+Total CPU time to Xst completion: 73.86 secs
+ 
+--> 
+
+Total memory usage is 424776 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  164 (   0 filtered)
+Number of infos    :   22 (   0 filtered)
+

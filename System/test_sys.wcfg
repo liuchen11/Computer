@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/ISE_workspace/System/test_sys_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="define" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="test_sys" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="109" />
+   <wvobject fp_name="/test_sys/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/ramdata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ramdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ramdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/ramaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ramaddr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ramaddr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/ramoe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramoe</obj_property>
+      <obj_property name="ObjectShortName">ramoe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/ramen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramen</obj_property>
+      <obj_property name="ObjectShortName">ramen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/ramwe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramwe</obj_property>
+      <obj_property name="ObjectShortName">ramwe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/out1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ramaddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ramaddr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ramaddr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ramdata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ramdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ramdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ramoe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramoe</obj_property>
+      <obj_property name="ObjectShortName">ramoe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ramen" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramen</obj_property>
+      <obj_property name="ObjectShortName">ramen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ramwe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ramwe</obj_property>
+      <obj_property name="ObjectShortName">ramwe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/out1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/const1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">const1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">const1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_open" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_open</obj_property>
+      <obj_property name="ObjectShortName">en_open</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/clk1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk1</obj_property>
+      <obj_property name="ObjectShortName">clk1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc_back" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_back[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_back[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ins_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins_addr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ins_addr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ins_if" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins_if[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ins_if[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc_if" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_if[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_if[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ins_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ins_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/memc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memc[11:0]</obj_property>
+      <obj_property name="ObjectShortName">memc[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/exec" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exec[10:0]</obj_property>
+      <obj_property name="ObjectShortName">exec[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc_id[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc_id[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/memc_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memc_id[11:0]</obj_property>
+      <obj_property name="ObjectShortName">memc_id[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/exec_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exec_id[10:0]</obj_property>
+      <obj_property name="ObjectShortName">exec_id[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s10_0_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s10_0_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s10_0_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/z4_2_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z4_2_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">z4_2_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/z7_0_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z7_0_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">z7_0_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s3_0_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s3_0_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_0_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s4_0_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s4_0_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s4_0_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s7_0_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s7_0_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s7_0_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data1_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data2_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ra_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ra_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/sp_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sp_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sp_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ih_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ih_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ih_id[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc_e_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc_e_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc_e_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/memc_e_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memc_e_in[11:0]</obj_property>
+      <obj_property name="ObjectShortName">memc_e_in[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc_exe[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc_exe[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/memc_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memc_exe[11:0]</obj_property>
+      <obj_property name="ObjectShortName">memc_exe[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/exec_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">exec_exe[10:0]</obj_property>
+      <obj_property name="ObjectShortName">exec_exe[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s10_0_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s10_0_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s10_0_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/z4_2_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z4_2_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">z4_2_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data1_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data2_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ra_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ra_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/sp_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sp_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sp_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ih_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ih_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ih_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/z7_0_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z7_0_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">z7_0_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s3_0_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s3_0_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s3_0_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s4_0_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s4_0_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s4_0_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/s7_0_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s7_0_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s7_0_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r10_8_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r10_8_exe[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r10_8_exe[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r7_5_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r7_5_exe[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r7_5_exe[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r4_2_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r4_2_exe[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r4_2_exe[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/bias" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">bias[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bias[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/jump_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">jump_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">jump_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/op_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op_1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">op_1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/op_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op_2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">op_2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/alu_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/zflag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">zflag</obj_property>
+      <obj_property name="ObjectShortName">zflag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/sflag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sflag</obj_property>
+      <obj_property name="ObjectShortName">sflag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/t_exe" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t_exe[15:0]</obj_property>
+      <obj_property name="ObjectShortName">t_exe[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data1_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data2_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ra_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ra_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ih_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ih_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ih_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/sp_c" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sp_c[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sp_c[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data1_u" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1_u[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_u[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data2_u" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2_u[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_u[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ra_u" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra_u[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ra_u[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ih_u" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ih_u[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ih_u[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/sp_u" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sp_u[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sp_u[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/bubble" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bubble</obj_property>
+      <obj_property name="ObjectShortName">bubble</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc_mem[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc_mem[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/memc_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">memc_mem[11:0]</obj_property>
+      <obj_property name="ObjectShortName">memc_mem[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/jump_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">jump_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">jump_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/pc_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pc_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/t_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">t_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/alu_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">alu_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data1_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data1_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data1_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data2_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data2_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data2_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ra_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ra_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ra_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ih_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ih_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ih_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r10_8_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r10_8_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r10_8_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r7_5_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r7_5_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r7_5_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/r4_2_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">r4_2_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">r4_2_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/read_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">read_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/write_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">write_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">write_data[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/ram_addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ram_addr[17:0]</obj_property>
+      <obj_property name="ObjectShortName">ram_addr[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_mem[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/addr_mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_mem[2:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_mem[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/wbc_wb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wbc_wb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wbc_wb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/addr_wb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr_wb[2:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_wb[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/data_wb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_wb[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_wb[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_pc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_pc</obj_property>
+      <obj_property name="ObjectShortName">en_pc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_if_id" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_if_id</obj_property>
+      <obj_property name="ObjectShortName">en_if_id</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_id_exe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_id_exe</obj_property>
+      <obj_property name="ObjectShortName">en_id_exe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_exe_mem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_exe_mem</obj_property>
+      <obj_property name="ObjectShortName">en_exe_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_sys/uut/en_mem_wb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en_mem_wb</obj_property>
+      <obj_property name="ObjectShortName">en_mem_wb</obj_property>
+   </wvobject>
+</wave_config>
