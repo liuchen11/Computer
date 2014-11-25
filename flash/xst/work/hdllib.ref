@@ -1,0 +1,8 @@
+EN flash NULL D:/ISE_workspace/Computer/flash/flash.vhd sub00/vhpl04 1386264936
+EN flash_io NULL D:/ISE_workspace/Computer/flash/flash_io.vhd sub00/vhpl02 1386264934
+AR flash behavioral D:/ISE_workspace/Computer/flash/flash.vhd sub00/vhpl05 1386264937
+AR clk_1152 behavioral D:/ISE_workspace/Computer/flash/clk_1152.vhd sub00/vhpl01 1386264933
+EN vga NULL D:/ISE_workspace/Computer/flash/VGA.vhd sub00/vhpl06 1386264930
+AR vga behavioral D:/ISE_workspace/Computer/flash/VGA.vhd sub00/vhpl07 1386264931
+AR flash_io behavioral D:/ISE_workspace/Computer/flash/flash_io.vhd sub00/vhpl03 1386264935
+EN clk_1152 NULL D:/ISE_workspace/Computer/flash/clk_1152.vhd sub00/vhpl00 1386264932

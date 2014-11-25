@@ -1,0 +1,157 @@
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "C:/ise/cpldcode/flash/flash.xst" -ofn "C:/ise/cpldcode/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/flash/flash.xst" -ofn "D:/ISE_workspace/Computer/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/flash/flash.xst" -ofn "D:/ISE_workspace/Computer/flash/flash.syr" 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/flash/flash.xst" -ofn "D:/ISE_workspace/Computer/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 
+xst -intstyle ise -ifn "D:/ISE_workspace/Computer/flash/flash.xst" -ofn "D:/ISE_workspace/Computer/flash/flash.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc flash.ucf -p xc3s1200e-fg320-5 flash.ngc flash.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o flash_map.ncd flash.ngd flash.pcf 
+par -w -intstyle ise -ol high -t 1 flash_map.ncd flash.ncd flash.pcf 
+par -w -intstyle ise -ol std -t 1 flash_map.ncd flash.ncd flash.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml flash.twx flash.ncd -o flash.twr flash.pcf -ucf flash.ucf 
+bitgen -intstyle ise -f flash.ut flash.ncd 

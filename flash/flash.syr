@@ -1,0 +1,800 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: flash.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "flash.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "flash"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-5-fg320
+
+---- Source Options
+Top Module Name                    : flash
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/ISE_workspace/Computer/flash/VGA.vhd" in Library work.
+Entity <VGA> compiled.
+Entity <VGA> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "D:/ISE_workspace/Computer/flash/clk_1152.vhd" in Library work.
+Architecture behavioral of Entity clk_1152 is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/flash/flash_io.vhd" in Library work.
+Architecture behavioral of Entity flash_io is up to date.
+Compiling vhdl file "D:/ISE_workspace/Computer/flash/flash.vhd" in Library work.
+Entity <flash> compiled.
+Entity <flash> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <flash> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VGA> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <clk_1152> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <flash_io> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <flash> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE_workspace/Computer/flash/flash.vhd" line 159: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <state>
+INFO:Xst:2679 - Register <wrn> in unit <flash> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <ram1_oe> in unit <flash> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <flash> analyzed. Unit <flash> generated.
+
+Analyzing Entity <VGA> in library <work> (Architecture <Behavioral>).
+Entity <VGA> analyzed. Unit <VGA> generated.
+
+Analyzing Entity <clk_1152> in library <work> (Architecture <behavioral>).
+Entity <clk_1152> analyzed. Unit <clk_1152> generated.
+
+Analyzing Entity <flash_io> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "D:/ISE_workspace/Computer/flash/flash_io.vhd" line 67: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ctl_read>
+Entity <flash_io> analyzed. Unit <flash_io> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <VGA>.
+    Related source file is "D:/ISE_workspace/Computer/flash/VGA.vhd".
+WARNING:Xst:1780 - Signal <div> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 64x45-bit ROM for signal <$rom0000>.
+    Found 1-bit register for signal <Hs>.
+    Found 3-bit register for signal <B>.
+    Found 3-bit register for signal <G>.
+    Found 3-bit register for signal <R>.
+    Found 1-bit register for signal <Vs>.
+    Found 10-bit up counter for signal <col>.
+    Found 10-bit comparator greatequal for signal <Hs$cmp_ge0000> created at line 39038.
+    Found 10-bit comparator lessequal for signal <Hs$cmp_le0000> created at line 39038.
+    Found 10-bit up counter for signal <row>.
+    Found 1-bit register for signal <stdclk>.
+    Found 10-bit comparator greatequal for signal <Vs$cmp_ge0000> created at line 39043.
+    Found 10-bit comparator lessequal for signal <Vs$cmp_le0000> created at line 39043.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+Unit <VGA> synthesized.
+
+
+Synthesizing Unit <clk_1152>.
+    Related source file is "D:/ISE_workspace/Computer/flash/clk_1152.vhd".
+    Found 1-bit register for signal <clk_tmp>.
+    Found 21-bit up counter for signal <count>.
+    Found 21-bit up counter for signal <count64>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clk_1152> synthesized.
+
+
+Synthesizing Unit <flash_io>.
+    Related source file is "D:/ISE_workspace/Computer/flash/flash_io.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | waiting                                        |
+    | Power Up State     | waiting                                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit tristate buffer for signal <flash_data>.
+    Found 1-bit register for signal <flash_we>.
+    Found 22-bit register for signal <flash_addr>.
+    Found 16-bit register for signal <data_out>.
+    Found 1-bit register for signal <flash_oe>.
+    Found 1-bit register for signal <ctl_read_last>.
+    Found 1-bit xor2 for signal <flash_we$xor0000> created at line 79.
+    Found 16-bit register for signal <Mtridata_flash_data> created at line 74.
+    Found 1-bit register for signal <Mtrien_flash_data> created at line 74.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  58 D-type flip-flop(s).
+	inferred  16 Tristate(s).
+Unit <flash_io> synthesized.
+
+
+Synthesizing Unit <flash>.
+    Related source file is "D:/ISE_workspace/Computer/flash/flash.vhd".
+WARNING:Xst:1780 - Signal <stdscan> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <staddr<23:22>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <staddr<21:0>> is used but never assigned. This sourceless signal will be automatically connected to value 0000000000000000000000.
+WARNING:Xst:1780 - Signal <response> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <edaddr<23:17>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <edaddr<16:0>> is used but never assigned. This sourceless signal will be automatically connected to value 00000000111110011.
+WARNING:Xst:1780 - Signal <data_tmp<15:8>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <blockaddr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Using one-hot encoding for signal <state>.
+    Found 1-bit register for signal <rdn>.
+    Found 16-bit register for signal <led>.
+    Found 16-bit register for signal <data_ram1>.
+    Found 17-bit register for signal <addr_ram1>.
+    Found 1-bit register for signal <ram1_rw>.
+    Found 17-bit addsub for signal <addr_ram1$share0000> created at line 176.
+    Found 1-bit register for signal <ctl_read>.
+    Found 8-bit register for signal <data_tmp<7:0>>.
+    Found 22-bit register for signal <flash_addr_input>.
+    Found 22-bit adder for signal <flash_addr_input$addsub0000> created at line 202.
+    Found 1-bit register for signal <high>.
+    Found 5-bit register for signal <state>.
+    Summary:
+	inferred  83 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <flash> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 64x45-bit ROM                                         : 1
+# Adders/Subtractors                                   : 2
+ 17-bit addsub                                         : 1
+ 22-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 21-bit up counter                                     : 2
+# Registers                                            : 61
+ 1-bit register                                        : 52
+ 16-bit register                                       : 2
+ 17-bit register                                       : 1
+ 22-bit register                                       : 2
+ 3-bit register                                        : 3
+ 5-bit register                                        : 1
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 2
+# Tristates                                            : 1
+ 16-bit tristate buffer                                : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <flash/state/FSM> on signal <state[1:6]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ waiting | 000001
+ read1   | 000010
+ read2   | 000100
+ read3   | 001000
+ read4   | 010000
+ done    | 100000
+---------------------
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_0> in Unit <flash> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_1> <Mtridata_flash_data_2> <Mtridata_flash_data_3> <Mtridata_flash_data_4> <Mtridata_flash_data_5> <Mtridata_flash_data_6> <Mtridata_flash_data_7> 
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+INFO:Xst:2261 - The FF/Latch <Mtridata_flash_data_8> in Unit <flash> is equivalent to the following 7 FFs/Latches, which will be removed : <Mtridata_flash_data_9> <Mtridata_flash_data_10> <Mtridata_flash_data_11> <Mtridata_flash_data_12> <Mtridata_flash_data_13> <Mtridata_flash_data_14> <Mtridata_flash_data_15> 
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<9> Mtridata_flash_data<9> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<8> and Mtridata_flash_data<10> Mtridata_flash_data<10> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<11> Mtridata_flash_data<11> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<12> Mtridata_flash_data<12> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<13> Mtridata_flash_data<13> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<14> Mtridata_flash_data<14> signal will be lost.
+WARNING:Xst:638 - in unit flash Conflict on KEEP property on signal Mtridata_flash_data<10> and Mtridata_flash_data<15> Mtridata_flash_data<15> signal will be lost.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_8> (without init value) has a constant value of 0 in block <flash>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <Mtridata_flash_data<15:8>> (without init value) have a constant value of 0 in block <flash_io>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 64x45-bit ROM                                         : 1
+# Adders/Subtractors                                   : 2
+ 17-bit addsub                                         : 1
+ 22-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 2
+ 21-bit up counter                                     : 2
+# Registers                                            : 146
+ Flip-Flops                                            : 146
+# Comparators                                          : 4
+ 10-bit comparator greatequal                          : 2
+ 10-bit comparator lessequal                           : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Mtridata_flash_data_0> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_1> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_2> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_3> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_4> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_5> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_6> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_flash_data_7> (without init value) has a constant value of 1 in block <flash_io>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<1> Mtridata_flash_data<1> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<2> Mtridata_flash_data<2> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<3> Mtridata_flash_data<3> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<4> Mtridata_flash_data<4> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<5> Mtridata_flash_data<5> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<6> Mtridata_flash_data<6> signal will be lost.
+WARNING:Xst:638 - in unit flash_io Conflict on KEEP property on signal Mtridata_flash_data<0> and Mtridata_flash_data<7> Mtridata_flash_data<7> signal will be lost.
+WARNING:Xst:2677 - Node <state_4> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_15> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_16> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_17> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_18> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_19> of sequential type is unconnected in block <flash>.
+WARNING:Xst:2677 - Node <clk_producer/count64_20> of sequential type is unconnected in block <flash>.
+
+Optimizing unit <flash> ...
+
+Optimizing unit <VGA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block flash, actual ratio is 12.
+FlipFlop VGA_part/col_1 has been replicated 1 time(s)
+FlipFlop VGA_part/col_2 has been replicated 2 time(s)
+FlipFlop VGA_part/col_3 has been replicated 2 time(s)
+FlipFlop VGA_part/col_4 has been replicated 1 time(s)
+FlipFlop VGA_part/col_5 has been replicated 1 time(s)
+FlipFlop VGA_part/col_8 has been replicated 1 time(s)
+FlipFlop VGA_part/row_3 has been replicated 1 time(s)
+FlipFlop VGA_part/row_4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 214
+ Flip-Flops                                            : 214
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : flash.ngr
+Top Level Output File Name         : flash
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 114
+
+Cell Usage :
+# BELS                             : 2558
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 73
+#      LUT2                        : 71
+#      LUT2_D                      : 53
+#      LUT2_L                      : 9
+#      LUT3                        : 193
+#      LUT3_D                      : 61
+#      LUT3_L                      : 55
+#      LUT4                        : 1117
+#      LUT4_D                      : 267
+#      LUT4_L                      : 289
+#      MULT_AND                    : 16
+#      MUXCY                       : 95
+#      MUXF5                       : 107
+#      MUXF6                       : 44
+#      VCC                         : 1
+#      XORCY                       : 95
+# FlipFlops/Latches                : 214
+#      FD                          : 15
+#      FDC                         : 23
+#      FDCE                        : 28
+#      FDCPE                       : 5
+#      FDE                         : 115
+#      FDP                         : 3
+#      FDPE                        : 3
+#      FDR                         : 22
+# Clock Buffers                    : 5
+#      BUFG                        : 3
+#      BUFGP                       : 2
+# IO Buffers                       : 112
+#      IBUF                        : 3
+#      IOBUF                       : 16
+#      OBUF                        : 93
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-5 
+
+ Number of Slices:                     1128  out of   8672    13%  
+ Number of Slice Flip Flops:            198  out of  17344     1%  
+ Number of 4 input LUTs:               2199  out of  17344    12%  
+ Number of IOs:                         114
+ Number of bonded IOBs:                 114  out of    250    45%  
+    IOB Flip Flops:                      16
+ Number of GCLKs:                         5  out of     24    20%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_producer/count64_141           | BUFG                   | 87    |
+clk                                | BUFGP                  | 37    |
+clk_producer/clk_tmp1              | BUFG                   | 48    |
+VGA_part/stdclk1                   | BUFG                   | 41    |
+scan                               | BUFGP                  | 1     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------+--------------------------+-------+
+Control Signal                                             | Buffer(FF name)          | Load  |
+-----------------------------------------------------------+--------------------------+-------+
+VGA_part/rst_inv(flash/reset_inv1_INV_0:O)                 | NONE(VGA_part/col_0)     | 59    |
+ram1_en_OBUF(XST_GND:G)                                    | NONE(state_2)            | 2     |
+state_2__or0000(state_2__or00001:O)                        | NONE(state_2)            | 2     |
+flash/ctl_read_last_and0000(flash/ctl_read_last_and00001:O)| NONE(flash/ctl_read_last)| 1     |
+flash/ctl_read_last_and0001(flash/ctl_read_last_and00011:O)| NONE(flash/ctl_read_last)| 1     |
+state_0__and0000(state_0__and00001:O)                      | NONE(state_0)            | 1     |
+state_1__and0000(state_and00001:O)                         | NONE(state_1)            | 1     |
+-----------------------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 13.539ns (Maximum Frequency: 73.862MHz)
+   Minimum input arrival time before clock: 4.417ns
+   Maximum output required time after clock: 4.562ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_producer/count64_141'
+  Clock period: 7.247ns (frequency: 137.981MHz)
+  Total number of paths / destination ports: 1368 / 100
+-------------------------------------------------------------------------
+Delay:               7.247ns (Levels of Logic = 20)
+  Source:            state_1 (FF)
+  Destination:       addr_ram1_16 (FF)
+  Source Clock:      clk_producer/count64_141 rising
+  Destination Clock: clk_producer/count64_141 rising
+
+  Data Path: state_1 to addr_ram1_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCPE:C->Q           27   0.514   1.072  state_1 (state_1)
+     INV:I->O             17   0.612   0.893  addr_ram1_mux0001<0>11_INV_0 (addr_ram1_mux0001<0>_mand)
+     MULT_AND:I1->LO       0   0.645   0.000  addr_ram1_mux0001<0>_mand (addr_ram1_mux0001<0>_mand1)
+     MUXCY:DI->O           1   0.773   0.000  Maddsub_addr_ram1_share0000_cy<0> (Maddsub_addr_ram1_share0000_cy<0>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<1> (Maddsub_addr_ram1_share0000_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<2> (Maddsub_addr_ram1_share0000_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<3> (Maddsub_addr_ram1_share0000_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<4> (Maddsub_addr_ram1_share0000_cy<4>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<5> (Maddsub_addr_ram1_share0000_cy<5>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<6> (Maddsub_addr_ram1_share0000_cy<6>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<7> (Maddsub_addr_ram1_share0000_cy<7>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<8> (Maddsub_addr_ram1_share0000_cy<8>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<9> (Maddsub_addr_ram1_share0000_cy<9>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<10> (Maddsub_addr_ram1_share0000_cy<10>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<11> (Maddsub_addr_ram1_share0000_cy<11>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<12> (Maddsub_addr_ram1_share0000_cy<12>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<13> (Maddsub_addr_ram1_share0000_cy<13>)
+     MUXCY:CI->O           1   0.052   0.000  Maddsub_addr_ram1_share0000_cy<14> (Maddsub_addr_ram1_share0000_cy<14>)
+     MUXCY:CI->O           0   0.052   0.000  Maddsub_addr_ram1_share0000_cy<15> (Maddsub_addr_ram1_share0000_cy<15>)
+     XORCY:CI->O           1   0.699   0.387  Maddsub_addr_ram1_share0000_xor<16> (addr_ram1_share0000<16>)
+     LUT4:I2->O            1   0.612   0.000  addr_ram1_mux0000<16>1 (addr_ram1_mux0000<16>)
+     FDE:D                     0.268          addr_ram1_16
+    ----------------------------------------
+    Total                      7.247ns (4.895ns logic, 2.352ns route)
+                                       (67.5% logic, 32.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.289ns (frequency: 233.136MHz)
+  Total number of paths / destination ports: 814 / 59
+-------------------------------------------------------------------------
+Delay:               4.289ns (Levels of Logic = 6)
+  Source:            clk_producer/count_3 (FF)
+  Destination:       clk_producer/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clk_producer/count_3 to clk_producer/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.532  clk_producer/count_3 (clk_producer/count_3)
+     LUT4:I0->O            1   0.612   0.000  clk_producer/clk_tmp_cmp_eq0000_wg_lut<1> (clk_producer/clk_tmp_cmp_eq0000_wg_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  clk_producer/clk_tmp_cmp_eq0000_wg_cy<1> (clk_producer/clk_tmp_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.052   0.000  clk_producer/clk_tmp_cmp_eq0000_wg_cy<2> (clk_producer/clk_tmp_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.052   0.000  clk_producer/clk_tmp_cmp_eq0000_wg_cy<3> (clk_producer/clk_tmp_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.052   0.000  clk_producer/clk_tmp_cmp_eq0000_wg_cy<4> (clk_producer/clk_tmp_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          22   0.289   0.989  clk_producer/clk_tmp_cmp_eq0000_wg_cy<5> (clk_producer/clk_tmp_cmp_eq0000)
+     FDR:R                     0.795          clk_producer/count_0
+    ----------------------------------------
+    Total                      4.289ns (2.768ns logic, 1.521ns route)
+                                       (64.5% logic, 35.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_producer/clk_tmp1'
+  Clock period: 3.236ns (frequency: 309.057MHz)
+  Total number of paths / destination ports: 69 / 49
+-------------------------------------------------------------------------
+Delay:               3.236ns (Levels of Logic = 2)
+  Source:            flash/state_FSM_FFd2 (FF)
+  Destination:       flash/flash_we (FF)
+  Source Clock:      clk_producer/clk_tmp1 rising
+  Destination Clock: clk_producer/clk_tmp1 rising
+
+  Data Path: flash/state_FSM_FFd2 to flash/flash_we
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.514   0.721  flash/state_FSM_FFd2 (flash/state_FSM_FFd2)
+     LUT4:I0->O            1   0.612   0.509  flash/flash_oe_mux000021 (N10)
+     LUT4:I0->O            1   0.612   0.000  flash/flash_we_mux0000 (flash/flash_we_mux0000)
+     FDP:D                     0.268          flash/flash_we
+    ----------------------------------------
+    Total                      3.236ns (2.006ns logic, 1.230ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_part/stdclk1'
+  Clock period: 13.539ns (frequency: 73.862MHz)
+  Total number of paths / destination ports: 97283 / 53
+-------------------------------------------------------------------------
+Delay:               13.539ns (Levels of Logic = 12)
+  Source:            VGA_part/col_0 (FF)
+  Destination:       VGA_part/B_1 (FF)
+  Source Clock:      VGA_part/stdclk1 rising
+  Destination Clock: VGA_part/stdclk1 rising
+
+  Data Path: VGA_part/col_0 to VGA_part/B_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            310   0.514   1.151  VGA_part/col_0 (VGA_part/col_0)
+     LUT4_D:I3->O         23   0.612   1.091  VGA_part/B_cmp_eq002011 (VGA_part/N311)
+     LUT2:I1->O            3   0.612   0.454  VGA_part/B_cmp_eq02281 (VGA_part/B_cmp_eq0228)
+     LUT4:I3->O            3   0.612   0.481  VGA_part/R_or015411 (VGA_part/N180)
+     LUT3_D:I2->LO         1   0.612   0.103  VGA_part/B_or017911 (N1505)
+     LUT4:I3->O            1   0.612   0.387  VGA_part/B_mux0001<1>13184 (VGA_part/B_mux0001<1>13184)
+     LUT4:I2->O            2   0.612   0.383  VGA_part/B_mux0001<1>13192 (VGA_part/N57)
+     LUT4:I3->O            1   0.612   0.360  VGA_part/B_mux0001<1>322_SW0 (N1204)
+     LUT4_L:I3->LO         1   0.612   0.103  VGA_part/B_mux0001<1>322 (VGA_part/B_mux0001<1>322)
+     LUT4:I3->O            2   0.612   0.410  VGA_part/B_mux0001<1>333 (VGA_part/B_mux0001<1>333)
+     LUT4:I2->O            1   0.612   0.387  VGA_part/B_mux0001<1>12677_SW31_G (N1257)
+     LUT3_L:I2->LO         1   0.612   0.103  VGA_part/B_mux0001<1>12677_SW311 (N267)
+     LUT4:I3->O            1   0.612   0.000  VGA_part/B_mux0001<1>372 (VGA_part/B_mux0001<1>)
+     FDE:D                     0.268          VGA_part/B_1
+    ----------------------------------------
+    Total                     13.539ns (8.126ns logic, 5.413ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'scan'
+  Clock period: 1.689ns (frequency: 592.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.689ns (Levels of Logic = 0)
+  Source:            VGA_part/stdclk (FF)
+  Destination:       VGA_part/stdclk (FF)
+  Source Clock:      scan rising
+  Destination Clock: scan rising
+
+  Data Path: VGA_part/stdclk to VGA_part/stdclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.514   0.380  VGA_part/stdclk (VGA_part/stdclk1)
+     FDR:R                     0.795          VGA_part/stdclk
+    ----------------------------------------
+    Total                      1.689ns (1.309ns logic, 0.380ns route)
+                                       (77.5% logic, 22.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_producer/count64_141'
+  Total number of paths / destination ports: 157 / 92
+-------------------------------------------------------------------------
+Offset:              4.417ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       high (FF)
+  Destination Clock: clk_producer/count64_141 rising
+
+  Data Path: reset to high
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.106   1.141  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           40   0.612   1.075  data_tmp_0_and000011 (high_and0000)
+     FDE:CE                    0.483          high
+    ----------------------------------------
+    Total                      4.417ns (2.201ns logic, 2.216ns route)
+                                       (49.8% logic, 50.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_producer/clk_tmp1'
+  Total number of paths / destination ports: 54 / 54
+-------------------------------------------------------------------------
+Offset:              4.332ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       flash/flash_addr_22 (FF)
+  Destination Clock: clk_producer/clk_tmp1 rising
+
+  Data Path: reset to flash/flash_addr_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.106   1.141  reset_IBUF (reset_IBUF)
+     LUT2:I0->O           22   0.612   0.989  flash/flash_addr_and00001 (flash/flash_addr_and0000)
+     FDE:CE                    0.483          flash/flash_addr_1
+    ----------------------------------------
+    Total                      4.332ns (2.201ns logic, 2.131ns route)
+                                       (50.8% logic, 49.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA_part/stdclk1'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              2.578ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       VGA_part/Vs (FF)
+  Destination Clock: VGA_part/stdclk1 rising
+
+  Data Path: reset to VGA_part/Vs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.106   0.989  reset_IBUF (reset_IBUF)
+     FDE:CE                    0.483          VGA_part/B_0
+    ----------------------------------------
+    Total                      2.578ns (1.589ns logic, 0.989ns route)
+                                       (61.6% logic, 38.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_producer/count64_141'
+  Total number of paths / destination ports: 51 / 51
+-------------------------------------------------------------------------
+Offset:              4.182ns (Levels of Logic = 1)
+  Source:            addr_ram1_16 (FF)
+  Destination:       addr_ram1<16> (PAD)
+  Source Clock:      clk_producer/count64_141 rising
+
+  Data Path: addr_ram1_16 to addr_ram1<16>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.514   0.499  addr_ram1_16 (addr_ram1_16)
+     OBUF:I->O                 3.169          addr_ram1_16_OBUF (addr_ram1<16>)
+    ----------------------------------------
+    Total                      4.182ns (3.683ns logic, 0.499ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_producer/clk_tmp1'
+  Total number of paths / destination ports: 40 / 40
+-------------------------------------------------------------------------
+Offset:              4.562ns (Levels of Logic = 1)
+  Source:            flash/Mtrien_flash_data (FF)
+  Destination:       flash_data<15> (PAD)
+  Source Clock:      clk_producer/clk_tmp1 rising
+
+  Data Path: flash/Mtrien_flash_data to flash_data<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            16   0.514   0.879  flash/Mtrien_flash_data (flash/Mtrien_flash_data)
+     IOBUF:T->IO               3.169          flash_data_15_IOBUF (flash_data<15>)
+    ----------------------------------------
+    Total                      4.562ns (3.683ns logic, 0.879ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_part/stdclk1'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            VGA_part/Hs (FF)
+  Destination:       Hs (PAD)
+  Source Clock:      VGA_part/stdclk1 rising
+
+  Data Path: VGA_part/Hs to Hs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.514   0.357  VGA_part/Hs (VGA_part/Hs)
+     OBUF:I->O                 3.169          Hs_OBUF (Hs)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 194.00 secs
+Total CPU time to Xst completion: 193.89 secs
+ 
+--> 
+
+Total memory usage is 379720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

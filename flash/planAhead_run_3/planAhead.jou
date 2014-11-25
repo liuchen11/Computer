@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Thu Dec 05 23:22:26 2013
+# Process ID: 4220
+# Log file: D:/ISE_workspace/Computer/flash/planAhead_run_3/planAhead.log
+# Journal file: D:/ISE_workspace/Computer/flash/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/ISE_workspace/Computer/flash/pa.fromNetlist.tcl

@@ -1,0 +1,4 @@
+vhdl work "VGA.vhd"
+vhdl work "flash_io.vhd"
+vhdl work "clk_1152.vhd"
+vhdl work "flash.vhd"

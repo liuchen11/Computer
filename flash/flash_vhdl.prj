@@ -1,0 +1,4 @@
+vhdl work "D:\ISE_workspace\Computer\flash\VGA.vhd"
+vhdl work "D:\ISE_workspace\Computer\flash\flash_io.vhd"
+vhdl work "D:\ISE_workspace\Computer\flash\clk_1152.vhd"
+vhdl work "D:\ISE_workspace\Computer\flash\flash.vhd"

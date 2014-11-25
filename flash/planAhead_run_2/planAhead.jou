@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Thu Dec 05 23:06:37 2013
+# Process ID: 8408
+# Log file: D:/ISE_workspace/Computer/flash/planAhead_run_2/planAhead.log
+# Journal file: D:/ISE_workspace/Computer/flash/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/ISE_workspace/Computer/flash/pa.fromNetlist.tcl
+startgroup
+set_property package_pin B9 [get_ports scan]
+endgroup
+startgroup
+set_property package_pin E6 [get_ports Vs]
+endgroup
+startgroup
+set_property package_pin D6 [get_ports Hs]
+endgroup
+startgroup
+set_property package_pin A7 [get_ports {R[0]}]
+endgroup
+startgroup
+set_property package_pin C3 [get_ports {R[1]}]
+endgroup
+startgroup
+set_property package_pin A4 [get_ports {R[2]}]
+endgroup
+startgroup
+set_property package_pin B4 [get_ports {G[0]}]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports {G[1]}]
+endgroup
+startgroup
+set_property package_pin C5 [get_ports {G[2]}]
+endgroup
+startgroup
+set_property package_pin D5 [get_ports {B[0]}]
+endgroup
+startgroup
+set_property package_pin A6 [get_ports {B[1]}]
+endgroup
+startgroup
+set_property package_pin B6 [get_ports {B[2]}]
+endgroup
+save_constraints
